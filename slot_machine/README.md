@@ -1,4 +1,5 @@
 # Machine à sous (Slot Machine)
+![_834d70c1-3251-46b5-9dba-b455130b90bb](https://github.com/savvyh/portfolio/assets/139894873/5e175de1-2814-42bd-ae7a-90f6fe3bbef1)
 
 ## Général 🎯
 L'objectif de ce projet est de créer une machine à sous utilisable depuis le terminal ! 
