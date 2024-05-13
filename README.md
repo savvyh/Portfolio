@@ -15,7 +15,7 @@
     - JavaScript 🟨
 
 ## Projets ✈️
-1. "Slot Machine" développé en Node.js fonctionnel depuis un terminal [ 09.05.2024 ]
+1. "Slot Machine" développé en Node.js fonctionnel depuis un terminal
 
 ### AUTHORS ♊
 Sarah Boutier
