@@ -1,9 +1,13 @@
 # Machine à sous (Slot Machine)
 ![_834d70c1-3251-46b5-9dba-b455130b90bb](https://github.com/savvyh/portfolio/assets/139894873/5e175de1-2814-42bd-ae7a-90f6fe3bbef1)
 
-## Général 🎯
-L'objectif de ce projet est de créer une machine à sous utilisable depuis le terminal ! 
-Ce projet est inspiré d'un concept vue sur Youtube que j'ai customisé à ma façon 🎰
+## Objectif 🎯
+L'objectif de ce projet est de créer une machine à sous utilisable depuis le terminal, mais également depuis le navigateur web ! 
+Ce projet est inspiré d'un concept vue sur Youtube dont j'ai personnalisé certaines fonctionnalités, notamment en créant l'interface web 🎰
+
+Avec la réalisation de ce projet simple, j'ai pu pratiquer et m'expérimenter avec Javascript 🟨
+Notamment grâce au développement du backend en `Node.js` mais aussi en créant un petit serveur via `Express`.
+Pour la partie frontend j'ai pu mobiliser mes connaissances en html et css. J'ai pour projet d'intégrer du `React` afin de me perfectionner !
 
 ### Etape à suivre 🍓
 1. Définir l'argent que le joueur possède.
@@ -20,14 +24,17 @@ Ce projet est inspiré d'un concept vue sur Youtube que j'ai customisé à ma fa
 - Installation du package Node.js : `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash`
 - Initialisation du package node : `npm init`
 - Installation de `npm` : `npm i prompt-sync`
-- Lancement du programme : `node script.js`
+- Installation de `Express` : `npm install express`
+- Lancement du programme depuis le terminal : `node script_terminal.js`
+- Lancement du programme grâce au serveur : `node server.js`
 
 ### Tools 🧑‍💻
 - VSCode 💻
 - Youtube 💡
-- Backend : Node.js 🟩
+- Backend : Node.js 🟩 Express
+- Frontend : HTML ♦️ CSS ♦️ Javascript
 
-### Illustrations 💻
+### Illustrations du terminal 💻
 1. Le joueur dépose un montant, il mise, il joue, le résultat sort, le solde est mis à jour, le joueur relance la partie en indiquant une nouvelle mise.
 
 ![image](https://github.com/savvyh/portfolio/assets/139894873/fdfba6f9-e68a-40c2-8e59-07801686a440)
