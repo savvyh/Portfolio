@@ -14,13 +14,35 @@ Pour chacun des projets, un fichier `README.md` sera créé afin de présenter l
 
 ### Technologies 👩‍💻
 
-| Backend  | Frontend |
-|-------------|-------|
-| Node.js 🟩  | HTML 🟧 |
-| Express ⚫  | CSS 🟦 |
-| Python  🐍  | JavaScript 🟨|
-| Django  🥑  | React 🔵|
-| API Restful 💠| jQuery 🫐|
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Technology</th>
+    <th>Library/Framework</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Backend</td>
+    <td>Node.js 🥬</td>
+    <td>Express</td>
+  </tr>
+  <tr>
+    <td>Python 🐍</td>
+    <td>Django, Flask</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Frontend</td>
+    <td>HTML 🔸</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>CSS 🔹</td>
+    <td>Bootstrap</td>
+  </tr>
+  <tr>
+    <td>JavaScript 🟨</td>
+    <td>React, jQuery, Vite.js</td>
+  </tr>
+</table>
 
 ## Projets ✈️
 1. Projet de 💲Casino💲
@@ -36,8 +58,9 @@ Pour chacun des projets, un fichier `README.md` sera créé afin de présenter l
     - Création de séance sur-mesure 👟
 
 3. Futurs projets :
-    - Reproduction de jeu comme Snake et Geoguessr.
-    - Programmation d'automatisation en Python.  
+    - Reproduction de jeux comme Snake et Geoguessr.
+    - Programmation d'automatisation en Python.
+    - Quizz ! 
 
 ### AUTHORS ♊
 Sarah Boutier
