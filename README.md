@@ -2,24 +2,29 @@
 
 ## 🌟 Découvrez mes premiers projets personnels !🌟
 
-## Tools 🧑‍💻
+Ces projets ont été réalisés dans le but de m'exercer et de pratiquer sur la programmation informatique ! <br>
+Certains projets sont encore en cours de création et seront mis à jour dans ce fichier une fois terminé 🌟 <br>
+Pour chacun des projets, un fichier `README.md` sera créé afin de présenter le projet en détail.
+
+## Tools 📚
 - VSCode 💻
+- StackOverFlow 🪗
 - Youtube 💡
-- Backend :
-    - Node.js 🟩
-    - Express ⚫
-    - Python 🐍
-    - Django 🥑
-- Frontend :
-    - HTML 🟧
-    - CSS 🟦
-    - JavaScript 🟨
-    - Jquery 🫐
-    - React 🔵
+- Figma 🫧
+
+### Technologies 👩‍💻
+
+| Backend  | Frontend |
+|-------------|-------|
+| Node.js 🟩  | HTML 🟧 |
+| Express ⚫  | CSS 🟦 |
+| Python  🐍  | JavaScript 🟨|
+| Django  🥑  | React 🔵|
+| API Restful 💠| jQuery 🫐|
 
 ## Projets ✈️
 1. Projet de 💲Casino💲
-    - "Slot Machine" développé en Node.js fonctionnel depuis un terminal, également développé pour l'utiliser depuis un navigateur web ! 🎰
+    - "Slot Machine" développé en Node.js fonctionnel depuis un terminal, également développé pour l'utiliser sur un navigateur web 🎰
     - "Roulette" maquette en cours de création sur Figma! 💻
     - "Black Jack" en cours d'imagination ! ☁️
 
