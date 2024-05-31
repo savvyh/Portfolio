@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine à Sous</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak One:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="slot-machine">
+    <h1>Machine à Sous</h1>
+    <div>
+      <label for="deposit-amount">Entrez un montant: </label>
+      <input id="deposit-amount" min="1" />
+      <button onclick="startGame()">Déposer</button>
+    </div>
+    <div>
+      <label for="bet-amount">Entrez votre mise: </label>
+      <input id="bet-amount" min="1" />
+      <button onclick="placeBet()">Miser</button>
+    </div>
+    <div id="balance"></div>
+    <div class="reels" id="reels"></div>
+    <div id="result"></div>
+    <button id="play-again" onclick="playAgain()">Voulez-vous rejouer ?</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

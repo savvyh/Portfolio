@@ -1,0 +1,65 @@
+body {
+    font-family: "Bakbak One", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+.slot-machine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.reels {
+    display: flex;
+    gap: 1em;
+}
+
+.reel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    text-align: center;
+}
+
+label {
+    font-family: "Bakbak One", Arial, sans-serif;
+    font-size: 25px;
+}
+
+input {
+    font-family: "Bakbak One", Arial, sans-serif;
+    font-size: 20px;
+    border-radius: 100px;
+    text-align: center;
+    background-color: yellow;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 4px;
+    font-family: "Bakbak One", Arial, sans-serif;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: rgb(6, 103, 148);
+    color: white;
+    transition: 300ms;
+}
+
+.slot-machine img {
+    width: 50px;
+    height: 50px;
+}
