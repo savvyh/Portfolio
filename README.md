@@ -50,14 +50,17 @@ Pour chacun des projets, un fichier `README.md` sera créé afin de présenter l
     - "Roulette" maquette en cours de création sur Figma! 💻
     - "Black Jack" en cours d'imagination ! ☁️
 
-2. Projet d'application web basé sur la création de séance d'entraînement sportif 🤾‍♀️
+2. Projet d'étude nommé "Airbnb clone" durant ma 1ère année à Holberton School ♾️
+    - J'ai choisi de mettre en avant le développement dynamic du site web :jigsaw:
+
+3. Projet d'application web basé sur la création de séance d'entraînement sportif 🤾‍♀️
     - Ce projet est la réalisation de mon projet de fin de 1ère année, prévu pour juillet 2024.
     - Création d'un chatbot 🤖
     - Base de données & API ⏩
     - Suivi de séance 🖲️
     - Création de séance sur-mesure 👟
 
-3. Futurs projets :
+4. Futurs projets :
     - Reproduction de jeux comme Snake et Geoguessr.
     - Programmation d'automatisation en Python.
     - Quizz ! 
