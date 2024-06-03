@@ -9,7 +9,7 @@ body {
 header {
     padding: 20px;
     position: relative;
-    z-index: 1; /* Ensures the header stays above the background image */
+    z-index: 1;
 }
 
 header h1 {
@@ -86,7 +86,15 @@ h2 {
     color: white;
 }
 
-h2:hover {
+h2 a:hover {
     transition: 0.8s;
     color: magenta;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 2px;
 }
