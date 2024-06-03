@@ -12,12 +12,12 @@
     <h1>Machine à Sous</h1>
     <div>
       <label for="deposit-amount">Entrez un montant: </label>
-      <input id="deposit-amount" min="1" />
+      <input id="deposit-amount" min="1" type="text" autocomplete="off" name="text" class="input"/>
       <button onclick="startGame()">Déposer</button>
     </div>
     <div>
       <label for="bet-amount">Entrez votre mise: </label>
-      <input id="bet-amount" min="1" />
+      <input id="bet-amount" min="1" type="text" autocomplete="off" name="text" class="input"/>
       <button onclick="placeBet()">Miser</button>
     </div>
     <div id="balance"></div>

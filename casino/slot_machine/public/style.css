@@ -5,19 +5,29 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: black;
+    background-image: url('/casino/slot_machine/public/images/background-casino.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
 }
 
 h1 {
     font-size: 100px;
+    text-transform: uppercase;
 }
 
 .slot-machine {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 0.5em;
+    background: rgba(255, 255, 255, 0.27);
+    border-radius: 16px;
+    padding: 110px 80px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(5.3px);
+    color: #4b4646;
 }
 
 .reels {
@@ -35,19 +45,40 @@ h1 {
 label {
     font-family: "Bakbak One", Arial, sans-serif;
     font-size: 25px;
+    text-transform: uppercase;
 }
 
 input {
     font-family: "Bakbak One", Arial, sans-serif;
     font-size: 20px;
-    border-radius: 100px;
     text-align: center;
-    background-color: yellow;
+    background: transparent;
+    width: 100px;
+    margin-left: 15px;
+    color: #4b4646;
+}
+
+.input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    background-color: #ccc;
+    border-radius: 8px;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+}
+  
+.input:focus {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #969696,
+               -13px -13px 100px #ffffff;
 }
 
 button {
     cursor: pointer;
     border-radius: 8px;
+    margin-left: 15px;
     padding: 4px;
     font-family: "Bakbak One", Arial, sans-serif;
     font-size: 18px;
@@ -57,9 +88,4 @@ button:hover {
     background-color: rgb(6, 103, 148);
     color: white;
     transition: 300ms;
-}
-
-.slot-machine img {
-    width: 50px;
-    height: 50px;
 }
