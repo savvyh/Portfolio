@@ -9,6 +9,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
+    margin: 0;
 }
 
 h1 {
@@ -23,7 +24,7 @@ h1 {
     gap: 0.5em;
     background: rgba(255, 255, 255, 0.27);
     border-radius: 16px;
-    padding: 110px 80px;
+    padding: 100px 70px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(5.3px);
@@ -33,13 +34,19 @@ h1 {
 .reels {
     display: flex;
     gap: 1em;
+    justify-content: center;
 }
 
 .reel {
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
+    gap: 1em;
     text-align: center;
+}
+
+.reel img {
+    width: 100px;
+    height: 100px;
 }
 
 label {
@@ -88,4 +95,8 @@ button:hover {
     background-color: rgb(6, 103, 148);
     color: white;
     transition: 300ms;
+}
+
+#play-again {
+    display: none;
 }
