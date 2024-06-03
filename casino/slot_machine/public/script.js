@@ -27,6 +27,7 @@ const startGame = () => {
     balance = depositAmount;
     updateBalance();
     document.getElementById('play-again').style.display = 'none'; // Hide the play again button
+    document.getElementById('bet-amount').focus(); // Déplacer le focus vers l'input de mise
   }
 };
 
@@ -132,3 +133,17 @@ const playAgain = () => {
   document.getElementById('result').innerText = '';
   document.getElementById('play-again').style.display = 'none';
 };
+
+// Ajout des gestionnaires d'événements pour la touche "Entrée"
+document.getElementById('deposit-amount').addEventListener('keyup', (event) => {
+  if (event.key === 'Enter') {
+    startGame();
+  }
+});
+
+document.getElementById('bet-amount').addEventListener('keyup', (event) => {
+  if (event.key === 'Enter') {
+    placeBet();
+  }
+});
+
