@@ -29,13 +29,16 @@ const startGame = () => {
     updateBalance();
     document.getElementById('play-again').style.display = 'none'; // Cache le bouton "rejouer?"
     document.getElementById('bet-amount').focus(); // Tabulation auto vers bouton suivant
+    document.querySelector('.deposit-section').style.display = 'none'; // Cache la section dépôt
+    document.querySelector('.bet-section').style.display = 'block'; // Affiche la section mise
   }
 };
 
 // Fonction pour mettre à jour le solde affiché
 const updateBalance = () => {
-  document.getElementById('balance').innerText = `Votre solde est de ${balance}€`;
+  document.getElementById('balance').innerHTML = `<span class="balance-amount">Solde actuel: ${balance}€</span>`;
 };
+
 
 // Fonction pour placer une mise
 const placeBet = () => {
@@ -127,6 +130,7 @@ const playAgain = () => {
   document.getElementById('reels').innerHTML = '';
   document.getElementById('result').innerText = '';
   document.getElementById('play-again').style.display = 'none';
+  document.querySelector('.deposit-section').style.display = 'block';
 };
 
 // Ajout des gestionnaires d'événements pour la touche "Entrée"
