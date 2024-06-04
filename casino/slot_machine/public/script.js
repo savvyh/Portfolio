@@ -3,6 +3,7 @@ const ROWS = 3;
 const COLUMNS = 3;
 
 const SYMBOLS_COUNT = {
+  'bar': 3,
   '7': 3,
   'cerise': 4,
   'raisin': 6,
@@ -26,8 +27,8 @@ const startGame = () => {
   } else {
     balance = depositAmount;
     updateBalance();
-    document.getElementById('play-again').style.display = 'none'; // Hide the play again button
-    document.getElementById('bet-amount').focus(); // Déplacer le focus vers l'input de mise
+    document.getElementById('play-again').style.display = 'none'; // Cache le bouton "rejouer?"
+    document.getElementById('bet-amount').focus(); // Tabulation auto vers bouton suivant
   }
 };
 
@@ -47,17 +48,16 @@ const placeBet = () => {
     balance -= betAmount;
     updateBalance();
     const reels = spin();
-    const rows = transpose(reels);
-    displayReels(rows);
-    const winnings = getWin(rows, betAmount);
+    displayReels(reels);
+    const winnings = getWin(reels, betAmount);
     balance += winnings;
     updateBalance();
     document.getElementById('result').innerText = `Vous avez gagné ${winnings}€`;
 
     if (balance <= 0) {
-      document.getElementById('play-again').style.display = 'block'; // Show the play again button
+      document.getElementById('play-again').style.display = 'block'; // Afficher le bouton "rejouer"
     } else {
-      document.getElementById('play-again').style.display = 'none'; // Hide the play again button
+      document.getElementById('play-again').style.display = 'none'; // Cache le bouton "rejouer" si solde > 0
     }
   }
 };
@@ -86,18 +86,6 @@ const spin = () => {
   return reels;
 };
 
-// Fonction qui transpose nos colonnes en lignes
-const transpose = (reels) => {
-  const rows = [];
-  for (let i = 0; i < ROWS; i++) {
-    rows.push([]);
-    for (let j = 0; j < COLUMNS; j++) {
-      rows[i].push(reels[j][i]);
-    }
-  }
-  return rows;
-};
-
 // Fonction qui affiche les lignes avec ses symboles
 const displayReels = (rows) => {
   const reelsDiv = document.getElementById('reels');
@@ -110,14 +98,21 @@ const displayReels = (rows) => {
   }
 };
 
-// Fonction qui check si le joueur a gagné
-const getWin = (rows, bet) => {
+// Fonction qui check si le joueur a gagné + bonus si "bar"
+const getWin = (reels, bet) => {
   let winnings = 0;
+  let barCount = 0;
 
-  for (const row of rows) {
-    if (row.every(symbol => symbol === row[0])) {
-      winnings += bet * SYMBOLS_VALUES[row[0]];
+  for (let rowIndex = 0; rowIndex < ROWS; rowIndex++) {
+    const rowSymbols = reels.map(reel => reel[rowIndex]);
+    if (rowSymbols.every(symbol => symbol === rowSymbols[0])) {
+      winnings += bet * SYMBOLS_VALUES[rowSymbols[0]];
     }
+    barCount += rowSymbols.filter(symbol => symbol === 'bar').length;
+  }
+
+  if (winnings > 0 && barCount > 0) {
+    winnings *= barCount;
   }
 
   return winnings;
@@ -146,4 +141,3 @@ document.getElementById('bet-amount').addEventListener('keyup', (event) => {
     placeBet();
   }
 });
-
