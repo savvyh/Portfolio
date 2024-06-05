@@ -5,39 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Machine à Sous</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Bakbak One:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="slot-machine">
-        <h1>Machine à Sous</h1>
-        <div class="deposit-section">
-            <label for="deposit-amount">Entrez un montant: </label>
-            <input id="deposit-amount" min="1" type="text" autocomplete="off" name="text" class="input"/>
-            <button onclick="startGame()">Déposer</button>
-        </div>
-        <div class="bet-section" style="display: none;">
-            <label for="bet-amount">Entrez votre mise: </label>
-            <input id="bet-amount" min="1" type="text" autocomplete="off" name="text" class="input"/>
-            <button onclick="placeBet()">Miser</button>
-        </div>
-        <div id="balance"></div>
-        <div class="reels" id="reels"></div>
-        <div id="result"></div>
-        <div class="rules-container">
-            <img class="question" src="/casino/slot_machine/public/images/question.svg" alt="Règles du jeu">
-            <div class="rules">
-                <p>Règles du jeu :<br>
-                - Entrez un montant pour alimenter votre solde.<br>
-                - Entre une mise valide (comprise dans votre solde).<br>
-                - Appuyez sur 'Entrée' pour rejouer la mise enregistrée.<br>
-                - Aligner 3 éléments sur la même ligne pour gagner.<br>
-                - Ordre des gains: 7 > cerise > raisin > fraise.<br>
-                - En cas de ligne réussie, le gain sera multiplié par le nombre de 'BAR' à l'écran.<br>
-                </p>
-            </div>
-        </div>
-        <button id="play-again" onclick="playAgain()">Voulez-vous rejouer ?</button>
+  <div class="slot-machine">
+    <h1>Machine à Sous</h1>
+    <div class="deposit-section">
+      <label for="deposit-amount">Entrez un montant: </label>
+      <input id="deposit-amount" min="1" type="text" autocomplete="off" name="text" class="input"/>
+      <button class="deposit" onclick="startGame()">Déposer</button>
     </div>
+    <div class="bet-section" style="display: none;">
+      <label for="bet-amount">Entrez votre mise: </label>
+      <input id="bet-amount" min="1" type="text" autocomplete="off" name="text" class="input"/>
+      <button class="bet" onclick="placeBet()">Miser</button>
+    </div>
+    <div id="balance" class="balance-container"></div>
+    <div id="current-bet" class="current-bet-container"></div>
+    <div class="reels" id="reels"></div>
+    <button class="press" onclick="placeBet()">
+        <span class="back"></span>
+        <span class="front"></span>
+    </button>
+    <div id="result"></div>
+    <div class="rules-container">
+      <img class="question" src="/casino/slot_machine/public/images/question.svg" alt="Règles du jeu">
+      <div class="rules">
+        <p>Règles du jeu :<br>
+          - Entrez un montant pour alimenter votre solde.<br>
+          - Entre une mise valide (comprise dans votre solde).<br>
+          - Appuyez sur le bouton ou sur 'Entrée' pour rejouer la mise enregistrée.<br>
+          - Aligner 3 éléments sur la même ligne pour gagner.<br>
+          - Ordre des gains: 7 > cerise > raisin > fraise.<br>
+          - En cas de ligne réussie, le gain sera multiplié par le nombre de 'BAR' à l'écran.<br>
+          - Obtenir le jackpot : Aligner 3 'BAR' et votre gain sera multiplié par 10 !<br>
+        </p>
+      </div>
+    </div>
+    <button class="play-again" id="play-again" onclick="playAgain()">Rejouer ?</button>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
