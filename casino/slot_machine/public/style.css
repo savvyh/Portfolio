@@ -32,6 +32,11 @@ h1 {
     position: relative;
 }
 
+.slot-machine.game-started h1 {
+    font-size: 50px;
+    margin-top: 20px;
+}
+
 .reels {
     display: flex;
     gap: 1em;
@@ -41,8 +46,11 @@ h1 {
 .reel {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 15px;
     text-align: center;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .reel img {
@@ -83,7 +91,7 @@ input {
                 -13px -13px 100px #ffffff;
 }
 
-button {
+.play-again button {
     cursor: pointer;
     border-radius: 8px;
     margin-left: 15px;
@@ -92,7 +100,7 @@ button {
     font-size: 18px;
 }
 
-button:hover {
+.play-again:hover {
     background-color: rgb(6, 103, 148);
     color: white;
     transition: 300ms;
@@ -100,6 +108,15 @@ button:hover {
 
 #play-again {
     display: none;
+}
+
+.deposit, .bet, .play-again {
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 15px;
+    padding: 4px;
+    font-family: "Bakbak One", Arial, sans-serif;
+    font-size: 18px;
 }
 
 .rules-container {
@@ -129,12 +146,104 @@ button:hover {
     display: block;
 }
 
-.balance-amount {
-    font-size: 25px;
-    position: absolute;
-    left: 30px;
+.current-bet-container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.balance-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.balance-amount, .bet-amount {
+    font-size: 20px;
     background-color: #ccc;
     border-radius: 8px;
     box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
     padding: 10px;
+    top: -20px;
+}
+
+.balance-amount.game-started {
+    left: 0;
+    top: 10px;
+}
+
+.bet-amount.game-started {
+    right: 0;
+    top: 10px;
+}
+
+.balance-amount.win {
+    background-color: greenyellow;
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #3cff00,
+                -13px -13px 100px greenyellow;
+}
+
+.press {
+    --primary: 255, 223, 0;
+    --secondary: 0, 0, 0;
+    width: 60px;
+    height: 50px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    outline: 10px solid rgba(var(--primary), .5);
+    border-radius: 100%;
+    position: relative;
+    transition: .3s;
+}
+  
+.press .back {
+    background: rgb(var(--secondary));
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+.press .front {
+    background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
+    box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
+    border-radius: 100%;
+    position: absolute;
+    border: 1px solid rgb(var(--secondary));
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: inherit;
+    transform: translateY(-15%);
+    transition: .15s;
+    color: rgb(var(--secondary));
+}
+  
+.press:active .front {
+    transform: translateY(0%);
+    box-shadow: 0 0;
+}
+
+.jackpot-message, .win-message {
+    position: absolute;
+    font-family: 'Honk', Arial;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 217, 0);
+    font-size: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
 }
