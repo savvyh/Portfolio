@@ -3,7 +3,7 @@ const ROWS = 3;
 const COLUMNS = 3;
 
 const SYMBOLS_COUNT = {
-  'bar': 3,
+  'bar': 2,
   '7': 3,
   'cerise': 4,
   'raisin': 6,
@@ -14,7 +14,8 @@ const SYMBOLS_VALUES = {
   '7': 5,
   'cerise': 4,
   'raisin': 3,
-  'fraise': 2
+  'fraise': 2,
+  'bar' : 10
 };
 
 let balance = 0;
@@ -28,9 +29,9 @@ const startGame = () => {
     balance = depositAmount;
     updateBalance();
     document.getElementById('play-again').style.display = 'none'; // Cache le bouton "rejouer?"
-    document.getElementById('bet-amount').focus(); // Tabulation auto vers bouton suivant
     document.querySelector('.deposit-section').style.display = 'none'; // Cache la section dépôt
     document.querySelector('.bet-section').style.display = 'block'; // Affiche la section mise
+    document.querySelector('.slot-machine').classList.add('game-started'); // Ajoute la classe 'game-started'
   }
 };
 
@@ -45,9 +46,12 @@ const placeBet = () => {
   const betAmount = parseFloat(document.getElementById('bet-amount').value);
   if (isNaN(betAmount) || betAmount <= 0) {
     alert("Mise invalide ! Réessayez");
+    document.querySelector('.bet-section').style.display = 'block'; // Affiche la section mise
   } else if (betAmount > balance) {
     alert("Vous n'avez pas assez d'argent pour cette mise. Réessayez.");
+    document.querySelector('.bet-section').style.display = 'block'; // Affiche la section mise
   } else {
+    document.querySelector('.bet-section').style.display = 'none'; // Cache la section mise
     balance -= betAmount;
     updateBalance();
     const reels = spin();
@@ -56,6 +60,8 @@ const placeBet = () => {
     balance += winnings;
     updateBalance();
     document.getElementById('result').innerText = `Vous avez gagné ${winnings}€`;
+
+    document.getElementById('current-bet').innerHTML = `<span class="bet-amount">Mise en cours: ${betAmount}€</span>`;
 
     if (balance <= 0) {
       document.getElementById('play-again').style.display = 'block'; // Afficher le bouton "rejouer"
@@ -131,6 +137,8 @@ const playAgain = () => {
   document.getElementById('result').innerText = '';
   document.getElementById('play-again').style.display = 'none';
   document.querySelector('.deposit-section').style.display = 'block';
+  document.querySelector('.slot-machine').classList.remove('game-started'); // Retire la classe 'game-started'
+  document.getElementById('current-bet').innerText = ''; // Réinitialise la mise actuelle
 };
 
 // Ajout des gestionnaires d'événements pour la touche "Entrée"
