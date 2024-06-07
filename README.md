@@ -74,6 +74,7 @@ Pour chacun des projets, un fichier `README.md` sera créé afin de présenter l
     - Reproduction de jeux comme Snake et Geoguessr.
     - Programmation d'automatisation en Python.
     - Quizz ! 
+    - Création de chatbot :robot:
 
 ### AUTHORS ♊
 Sarah Boutier
