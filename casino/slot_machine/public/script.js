@@ -3,7 +3,7 @@ const ROWS = 3;
 const COLUMNS = 3;
 
 const SYMBOLS_COUNT = {
-  'bar': 2,
+  'bar': 3,
   '7': 3,
   'cerise': 4,
   'raisin': 6,
