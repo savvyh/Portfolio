@@ -60,7 +60,17 @@ Pour chacun des projets, un fichier `README.md` sera créé afin de présenter l
     - Suivi de séance 🖲️
     - Création de séance sur-mesure 👟
 
-4. Futurs projets :
+4. Mini projet Javascript (HTML & CSS) :yellow_circle:
+    - Création d'une cloche de notification 🔔
+    - Générateur de captcha :blue_square:
+    - Aperçu d'onglet 🚩
+    - Simple générateur de mot de passe 🔢
+    - Barre de recherche 🔎
+    - Effet de pile 🪙
+    - Défilement d'image 🖼️
+    - Todo list très simple ✅
+
+5. Futurs projets :
     - Reproduction de jeux comme Snake et Geoguessr.
     - Programmation d'automatisation en Python.
     - Quizz ! 
