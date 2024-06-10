@@ -17,9 +17,11 @@ Ces mini projets développés en Javascript principalement, sont des exercices p
 
 <img src="https://github.com/savvyh/personal-project/assets/139894873/8f9fc307-d819-43d3-bf4e-80d6d2e6a0c5" alt="image" width="400" height="200"/>
 
-
 ### Simple générateur de mot de passe 🔢
 ### Barre de recherche 🔎
+<img src="https://github.com/savvyh/personal-project/assets/139894873/abfe85a2-2eb5-4d5e-ba5a-a02e2ae5e2d0" alt="image" width="200"/>
+<img src="https://github.com/savvyh/personal-project/assets/139894873/6dc7626f-24a7-4f9a-a1e8-bbd60dde2022" alt="image" width="800"/>
+
 ### Effet de pile 🪙
 ### Défilement d'image 🖼️
 ### Todo list très simple ✅
