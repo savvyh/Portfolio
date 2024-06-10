@@ -16,5 +16,5 @@ button.addEventListener("click", () => {
     crossIcon.style.opacity = 0;
   }
 
-  input.focus()
+  input.focus() // l'utilisateur peut directement taper sa recherche
 })
